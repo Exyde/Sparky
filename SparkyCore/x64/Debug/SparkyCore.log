@@ -1,0 +1,2 @@
+﻿  main.cpp
+C:\Users\youne\Documents\GitHub\cpp\Sparky\SparkyCore\main.cpp(1,10): fatal error C1083: Impossible d'ouvrir le fichier include : 'GLFW/glfw3.h' : No such file or directory
