@@ -1,2 +1,2 @@
-﻿LINK : warning LNK4098: conflit entre la bibliothèque par défaut 'MSVCRT' et les autres bibliothèques ; utilisez /NODEFAULTLIB:library
+﻿  window.cpp
   SparkyCore.vcxproj -> C:\Users\youne\Documents\GitHub\cpp\Sparky\Debug\SparkyCore.exe
