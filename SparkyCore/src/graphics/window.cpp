@@ -36,6 +36,14 @@ namespace sparky::graphics {
 		glfwMakeContextCurrent(m_window);
 		glfwSetWindowSizeCallback(m_window, windowResize);
 
+
+		//Glew part
+		if (glewInit() != GLEW_OK) {
+			std::cout << "Error initializing GLEW !" << std::endl;
+			return false;
+		}
+
+		std::cout << "OpenGL Version : " << glGetString(GL_VERSION) << std::endl;
 		return true;
 	}
 

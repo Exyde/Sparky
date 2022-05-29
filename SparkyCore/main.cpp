@@ -1,30 +1,28 @@
-#include <GLFW/glfw3.h>
-#include <iostream>
-
 #include "src/graphics/window.h"
 
 int main() {
 
 	sparky::graphics::Window window(960, 540, "Core Sparky Engine");
 
-	GLclampf r = 0.8;
-	GLclampf g = 0.1;
-	GLclampf b = 0.1;
-	GLclampf a = .9;
-	glClearColor(r, g, b, a);
+	glClearColor(.8f, .1f, .2f, 1.f);
 
-	std::cout << glGetString(GL_VERSION);
+	GLuint vao;
+	glGenVertexArrays(1, &vao);
+	glBindVertexArray(vao);
 
 	while (!window.Closed()) {
-
-		std::cout << window.getWidth() << " , " << window.getHeight() << std::endl;;
-
 		window.Clear();
+
+#if 1
 		glBegin(GL_TRIANGLES);
 		glVertex2f(-0.5f, -0.5f);
 		glVertex2f(0.0f, 0.5f);
 		glVertex2f(0.5f, -0.5f);
 		glEnd();
+
+#else 
+		glDrawArrays(GL_ARRAY_BUFFER, 0, 6);
+#endif
 		window.Update();
 	}
 
