@@ -3,7 +3,6 @@
 int main() {
 
 	sparky::graphics::Window window(960, 540, "Core Sparky Engine");
-
 	glClearColor(.8f, .1f, .2f, 1.f);
 
 	GLuint vao;
@@ -13,6 +12,9 @@ int main() {
 	while (!window.Closed()) {
 		window.Clear();
 
+		double x, y;
+		window.getMousePosition(x, y);
+		std::cout << x << " , " << y << std::endl;
 #if 1
 		glBegin(GL_TRIANGLES);
 		glVertex2f(-0.5f, -0.5f);

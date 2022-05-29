@@ -2,7 +2,10 @@
 
 namespace sparky::graphics {
 
-	void windowResize(GLFWwindow* window, int width, int height);
+	void window_resize(GLFWwindow* window, int width, int height);
+	void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);
+	void mouse_button_callback(GLFWwindow* window, int button, int action, int mods);
+	void cursor_position_callback(GLFWwindow* window, double xpos, double ypos);
 
 	Window::Window(int width, int height, const char* title) {
 		this->m_width = width;
@@ -11,6 +14,10 @@ namespace sparky::graphics {
 		if (!Init()) {
 			glfwTerminate();
 		}
+
+		for (int i = 0; i < MAX_KEYS; i++) { m_keys[i] = false; };
+		for (int i = 0; i < MAX_BUTTONS; i++) { m_mouseButtons[i] = false; };
+
 	}
 
 	Window::~Window() {
@@ -33,8 +40,14 @@ namespace sparky::graphics {
 			return false;
 		}
 
+		//Settings a lot of callbacks
 		glfwMakeContextCurrent(m_window);
-		glfwSetWindowSizeCallback(m_window, windowResize);
+		glfwSetWindowUserPointer(m_window, this);
+		glfwSetWindowSizeCallback(m_window, window_resize);
+
+		glfwSetKeyCallback(m_window, key_callback);
+		glfwSetMouseButtonCallback(m_window, mouse_button_callback);
+		glfwSetCursorPosCallback(m_window, cursor_position_callback);
 
 
 		//Glew part
@@ -53,7 +66,6 @@ namespace sparky::graphics {
 
 	void Window::Update() {
 		glfwPollEvents();
-		//glfwGetFramebufferSize(m_window, &m_width, &m_height);
 		glfwSwapBuffers(m_window);
 	}
 
@@ -61,7 +73,46 @@ namespace sparky::graphics {
 		return glfwWindowShouldClose(m_window) == 1;
 	}
 
-	void windowResize(GLFWwindow* window, int width, int height){
+	//Functions 
+	void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods) {
+		Window* win = (Window*)glfwGetWindowUserPointer(window);
+		
+		win->m_keys[key] = (action != GLFW_RELEASE);
+	}
+
+	void mouse_button_callback(GLFWwindow* window, int button, int action, int mods) {
+		Window* win = (Window*)glfwGetWindowUserPointer(window);
+		win->m_mouseButtons[button] = (action != GLFW_RELEASE);
+	}
+
+	void cursor_position_callback(GLFWwindow* window, double xpos, double ypos) {
+		Window* win = (Window*)glfwGetWindowUserPointer(window);
+		win->m_mouseX = xpos;
+		win->m_mouseY = ypos;
+
+	}
+
+
+	void window_resize(GLFWwindow* window, int width, int height){
 		glViewport(0, 0, width, height);
+	}
+
+	bool Window::isKeyPressed(unsigned int keyCode) const {
+
+		//TODO : Log this !
+		if (keyCode >= MAX_KEYS) return false;
+		return m_keys[keyCode];
+	}
+
+	bool Window::isMouseButtonPressed(unsigned int buttonCode) const {
+
+		//TODO : Log this !
+		if (buttonCode >= MAX_BUTTONS) return false;
+		return m_mouseButtons[buttonCode];
+	}
+
+	void Window::getMousePosition(double& x, double& y) const {
+		x = m_mouseX;
+		y = m_mouseY;
 	}
 }

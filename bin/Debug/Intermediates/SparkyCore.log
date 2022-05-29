@@ -1,7 +1,11 @@
 ﻿  main.cpp
   window.cpp
+C:\Users\youne\Documents\GitHub\cpp\Sparky\SparkyCore\src\graphics\window.cpp(114,55): error C2511: 'void sparky::graphics::Window::getMousePosition(double &,double &)' : impossible de trouver la fonction membre surchargée dans 'sparky::graphics::Window'
+C:\Users\youne\Documents\GitHub\cpp\Sparky\SparkyCore\src\graphics\window.h(12): message : voir la déclaration de 'sparky::graphics::Window'
+C:\Users\youne\Documents\GitHub\cpp\Sparky\SparkyCore\src\graphics\window.cpp(115,15): error C2597: référence non conforme à un membre non static 'sparky::graphics::Window::m_mouseX'
+C:\Users\youne\Documents\GitHub\cpp\Sparky\SparkyCore\src\graphics\window.cpp(115,15): error C3867: 'sparky::graphics::Window::m_mouseX' : syntaxe non-standard ; utilisez '&' pour créer un pointeur vers un membre
+C:\Users\youne\Documents\GitHub\cpp\Sparky\SparkyCore\src\graphics\window.cpp(115,15): error C2568: '=' : impossible de résoudre la surcharge de fonction
+C:\Users\youne\Documents\GitHub\cpp\Sparky\SparkyCore\src\graphics\window.cpp(116,15): error C2597: référence non conforme à un membre non static 'sparky::graphics::Window::m_mouseY'
+C:\Users\youne\Documents\GitHub\cpp\Sparky\SparkyCore\src\graphics\window.cpp(116,15): error C3867: 'sparky::graphics::Window::m_mouseY' : syntaxe non-standard ; utilisez '&' pour créer un pointeur vers un membre
+C:\Users\youne\Documents\GitHub\cpp\Sparky\SparkyCore\src\graphics\window.cpp(116,15): error C2568: '=' : impossible de résoudre la surcharge de fonction
   Génération de code en cours...
-LINK : warning LNK4098: conflit entre la bibliothèque par défaut 'MSVCRT' et les autres bibliothèques ; utilisez /NODEFAULTLIB:library
-LINK : warning LNK4098: conflit entre la bibliothèque par défaut 'LIBCMT' et les autres bibliothèques ; utilisez /NODEFAULTLIB:library
-glew32s.lib(glew.obj) : warning LNK4099: PDB 'vc120.pdb' n'a pu être trouvé avec 'glew32s.lib(glew.obj)' ou sur 'C:\Users\youne\Documents\GitHub\cpp\Sparky\bin\Debug\vc120.pdb' ; l'objet sera lié sans informations de débogage
-  SparkyCore.vcxproj -> C:\Users\youne\Documents\GitHub\cpp\Sparky\bin\Debug\SparkyCore.exe
