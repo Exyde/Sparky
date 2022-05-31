@@ -17,7 +17,6 @@ namespace sparky::graphics {
 
 		for (int i = 0; i < MAX_KEYS; i++) { m_keys[i] = false; };
 		for (int i = 0; i < MAX_BUTTONS; i++) { m_mouseButtons[i] = false; };
-
 	}
 
 	Window::~Window() {
@@ -91,7 +90,6 @@ namespace sparky::graphics {
 		win->m_mouseY = ypos;
 
 	}
-
 
 	void window_resize(GLFWwindow* window, int width, int height){
 		glViewport(0, 0, width, height);

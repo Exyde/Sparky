@@ -1,2 +1,22 @@
 ﻿  main.cpp
-C:\Users\youne\Documents\GitHub\cpp\Sparky\SparkyCore\main.cpp(1,10): fatal error C1083: Impossible d'ouvrir le fichier include : 'GLFW/glfw3.h' : No such file or directory
+  window.cpp
+  Génération de code en cours...
+main.obj : error LNK2019: symbole externe non résolu __imp___glewBindVertexArray référencé dans la fonction main
+main.obj : error LNK2019: symbole externe non résolu __imp___glewGenVertexArrays référencé dans la fonction main
+window.obj : error LNK2019: symbole externe non résolu __imp_glewInit référencé dans la fonction "private: bool __cdecl sparky::graphics::Window::Init(void)" (?Init@Window@graphics@sparky@@AEAA_NXZ)
+window.obj : error LNK2019: symbole externe non résolu glfwInit référencé dans la fonction "private: bool __cdecl sparky::graphics::Window::Init(void)" (?Init@Window@graphics@sparky@@AEAA_NXZ)
+window.obj : error LNK2019: symbole externe non résolu glfwTerminate référencé dans la fonction "public: __cdecl sparky::graphics::Window::Window(int,int,char const *)" (??0Window@graphics@sparky@@QEAA@HHPEBD@Z)
+window.obj : error LNK2019: symbole externe non résolu glfwCreateWindow référencé dans la fonction "private: bool __cdecl sparky::graphics::Window::Init(void)" (?Init@Window@graphics@sparky@@AEAA_NXZ)
+window.obj : error LNK2019: symbole externe non résolu glfwWindowShouldClose référencé dans la fonction "public: bool __cdecl sparky::graphics::Window::Closed(void)const " (?Closed@Window@graphics@sparky@@QEBA_NXZ)
+window.obj : error LNK2019: symbole externe non résolu glfwSetWindowUserPointer référencé dans la fonction "private: bool __cdecl sparky::graphics::Window::Init(void)" (?Init@Window@graphics@sparky@@AEAA_NXZ)
+window.obj : error LNK2019: symbole externe non résolu glfwGetWindowUserPointer référencé dans la fonction "void __cdecl sparky::graphics::cursor_position_callback(struct GLFWwindow *,double,double)" (?cursor_position_callback@graphics@sparky@@YAXPEAUGLFWwindow@@NN@Z)
+window.obj : error LNK2019: symbole externe non résolu glfwSetWindowSizeCallback référencé dans la fonction "private: bool __cdecl sparky::graphics::Window::Init(void)" (?Init@Window@graphics@sparky@@AEAA_NXZ)
+window.obj : error LNK2019: symbole externe non résolu glfwPollEvents référencé dans la fonction "public: void __cdecl sparky::graphics::Window::Update(void)" (?Update@Window@graphics@sparky@@QEAAXXZ)
+window.obj : error LNK2019: symbole externe non résolu glfwSetKeyCallback référencé dans la fonction "private: bool __cdecl sparky::graphics::Window::Init(void)" (?Init@Window@graphics@sparky@@AEAA_NXZ)
+window.obj : error LNK2019: symbole externe non résolu glfwSetMouseButtonCallback référencé dans la fonction "private: bool __cdecl sparky::graphics::Window::Init(void)" (?Init@Window@graphics@sparky@@AEAA_NXZ)
+window.obj : error LNK2019: symbole externe non résolu glfwSetCursorPosCallback référencé dans la fonction "private: bool __cdecl sparky::graphics::Window::Init(void)" (?Init@Window@graphics@sparky@@AEAA_NXZ)
+window.obj : error LNK2019: symbole externe non résolu glfwMakeContextCurrent référencé dans la fonction "private: bool __cdecl sparky::graphics::Window::Init(void)" (?Init@Window@graphics@sparky@@AEAA_NXZ)
+window.obj : error LNK2019: symbole externe non résolu glfwSwapBuffers référencé dans la fonction "public: void __cdecl sparky::graphics::Window::Update(void)" (?Update@Window@graphics@sparky@@QEAAXXZ)
+C:\Users\marun\Documents\GitHub\Sparky\Dependencies\GLFW\lib-vc2017\glfw3.lib : warning LNK4272: type d'ordinateur bibliothèque 'x86' en conflit avec le type d'ordinateur cible 'x64'
+C:\Users\marun\Documents\GitHub\Sparky\Dependencies\GLEW\lib\glew32s.lib : warning LNK4272: type d'ordinateur bibliothèque 'x86' en conflit avec le type d'ordinateur cible 'x64'
+C:\Users\marun\Documents\GitHub\Sparky\x64\Debug\SparkyCore.exe : fatal error LNK1120: 16 externes non résolus

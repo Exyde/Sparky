@@ -1,6 +1,5 @@
 #pragma once
 #include <iostream>
-
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
@@ -34,15 +33,16 @@ namespace sparky::graphics {
 		inline int getWidth() const		{ return m_width;  }
 		inline int getHeight() const	{ return m_height; }
 
-		bool isKeyPressed(unsigned int keyCode) const;
-		bool isMouseButtonPressed(unsigned int buttonCode) const ;
-		void getMousePosition(double& x, double& y) const;
+		bool isKeyPressed				(unsigned int keyCode) const;
+		bool isMouseButtonPressed		(unsigned int buttonCode) const ;
+		void getMousePosition			(double& x, double& y) const;
 
 
 	private:
 		bool Init();
-		friend static void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);
-		friend static void mouse_button_callback(GLFWwindow* window, int button, int action, int mods);
-		friend static void cursor_position_callback(GLFWwindow* window, double xpos, double ypos);
+		//GLFW Callbacks
+		friend static void key_callback					(GLFWwindow* window, int key, int scancode, int action, int mods);
+		friend static void mouse_button_callback		(GLFWwindow* window, int button, int action, int mods);
+		friend static void cursor_position_callback		(GLFWwindow* window, double xpos, double ypos);
 	};
 }
