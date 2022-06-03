@@ -1,5 +1,7 @@
 #include "src/graphics/window.h"
 #include "src/maths/vec2.h"
+#include "src/maths/vec3.h"
+
 
 #define LOG(x) std::cout << x << std::endl;
 
@@ -19,6 +21,9 @@ int main() {
 	vec2 a(1, 1);
 	vec2 b(1, 766.5);
 	vec2 c(2, 0);
+	vec3 vec(15, 23, 30);
+
+	vec.Log();
 
 	a.Log();
 

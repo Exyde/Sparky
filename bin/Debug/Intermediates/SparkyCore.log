@@ -1,4 +1,36 @@
 ﻿  main.cpp
+  vec4.cpp
+  vec3.cpp
   vec2.cpp
   Génération de code en cours...
-  SparkyCore.vcxproj -> C:\Users\marun\Documents\GitHub\Sparky\bin\Debug\SparkyCore.exe
+vec2.obj : error LNK2005: "public: __thiscall sparky::maths::vec2::vec2(float const &,float const &)" (??0vec2@maths@sparky@@QAE@ABM0@Z) déjà défini(e) dans vec4.obj
+vec2.obj : error LNK2005: "public: __thiscall sparky::maths::vec2::vec2(void)" (??0vec2@maths@sparky@@QAE@XZ) déjà défini(e) dans vec4.obj
+vec2.obj : error LNK2005: "class std::basic_ostream<char,struct std::char_traits<char> > & __cdecl sparky::maths::operator<<(class std::basic_ostream<char,struct std::char_traits<char> > &,struct sparky::maths::vec2 const &)" (??6maths@sparky@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@std@@AAV23@ABUvec2@01@@Z) déjà défini(e) dans vec4.obj
+vec2.obj : error LNK2005: "public: bool __thiscall sparky::maths::vec2::operator==(struct sparky::maths::vec2 const &)" (??8vec2@maths@sparky@@QAE_NABU012@@Z) déjà défini(e) dans vec4.obj
+vec2.obj : error LNK2005: "public: bool __thiscall sparky::maths::vec2::operator!=(struct sparky::maths::vec2 const &)" (??9vec2@maths@sparky@@QAE_NABU012@@Z) déjà défini(e) dans vec4.obj
+vec2.obj : error LNK2005: "struct sparky::maths::vec2 & __cdecl sparky::maths::operator*(struct sparky::maths::vec2 &,struct sparky::maths::vec2 const &)" (??Dmaths@sparky@@YAAAUvec2@01@AAU201@ABU201@@Z) déjà défini(e) dans vec4.obj
+vec2.obj : error LNK2005: "struct sparky::maths::vec2 & __cdecl sparky::maths::operator-(struct sparky::maths::vec2 &,struct sparky::maths::vec2 const &)" (??Gmaths@sparky@@YAAAUvec2@01@AAU201@ABU201@@Z) déjà défini(e) dans vec4.obj
+vec2.obj : error LNK2005: "struct sparky::maths::vec2 & __cdecl sparky::maths::operator+(struct sparky::maths::vec2 &,struct sparky::maths::vec2 const &)" (??Hmaths@sparky@@YAAAUvec2@01@AAU201@ABU201@@Z) déjà défini(e) dans vec4.obj
+vec2.obj : error LNK2005: "struct sparky::maths::vec2 & __cdecl sparky::maths::operator/(struct sparky::maths::vec2 &,struct sparky::maths::vec2 const &)" (??Kmaths@sparky@@YAAAUvec2@01@AAU201@ABU201@@Z) déjà défini(e) dans vec4.obj
+vec2.obj : error LNK2005: "public: bool __thiscall sparky::maths::vec2::operator<(struct sparky::maths::vec2 const &)" (??Mvec2@maths@sparky@@QAE_NABU012@@Z) déjà défini(e) dans vec4.obj
+vec2.obj : error LNK2005: "public: bool __thiscall sparky::maths::vec2::operator>(struct sparky::maths::vec2 const &)" (??Ovec2@maths@sparky@@QAE_NABU012@@Z) déjà défini(e) dans vec4.obj
+vec2.obj : error LNK2005: "public: struct sparky::maths::vec2 & __thiscall sparky::maths::vec2::operator*=(struct sparky::maths::vec2 const &)" (??Xvec2@maths@sparky@@QAEAAU012@ABU012@@Z) déjà défini(e) dans vec4.obj
+vec2.obj : error LNK2005: "public: struct sparky::maths::vec2 & __thiscall sparky::maths::vec2::operator+=(struct sparky::maths::vec2 const &)" (??Yvec2@maths@sparky@@QAEAAU012@ABU012@@Z) déjà défini(e) dans vec4.obj
+vec2.obj : error LNK2005: "public: struct sparky::maths::vec2 & __thiscall sparky::maths::vec2::operator-=(struct sparky::maths::vec2 const &)" (??Zvec2@maths@sparky@@QAEAAU012@ABU012@@Z) déjà défini(e) dans vec4.obj
+vec2.obj : error LNK2005: "public: struct sparky::maths::vec2 & __thiscall sparky::maths::vec2::operator/=(struct sparky::maths::vec2 const &)" (??_0vec2@maths@sparky@@QAEAAU012@ABU012@@Z) déjà défini(e) dans vec4.obj
+vec2.obj : error LNK2005: "public: void __thiscall sparky::maths::vec2::Log(void)const " (?Log@vec2@maths@sparky@@QBEXXZ) déjà défini(e) dans vec4.obj
+vec2.obj : error LNK2005: "public: struct sparky::maths::vec2 & __thiscall sparky::maths::vec2::add(float const &,float const &)" (?add@vec2@maths@sparky@@QAEAAU123@ABM0@Z) déjà défini(e) dans vec4.obj
+vec2.obj : error LNK2005: "public: struct sparky::maths::vec2 & __thiscall sparky::maths::vec2::add(float const &)" (?add@vec2@maths@sparky@@QAEAAU123@ABM@Z) déjà défini(e) dans vec4.obj
+vec2.obj : error LNK2005: "public: struct sparky::maths::vec2 & __thiscall sparky::maths::vec2::add(struct sparky::maths::vec2 const &)" (?add@vec2@maths@sparky@@QAEAAU123@ABU123@@Z) déjà défini(e) dans vec4.obj
+vec2.obj : error LNK2005: "public: struct sparky::maths::vec2 & __thiscall sparky::maths::vec2::divide(float const &,float const &)" (?divide@vec2@maths@sparky@@QAEAAU123@ABM0@Z) déjà défini(e) dans vec4.obj
+vec2.obj : error LNK2005: "public: struct sparky::maths::vec2 & __thiscall sparky::maths::vec2::divide(float const &)" (?divide@vec2@maths@sparky@@QAEAAU123@ABM@Z) déjà défini(e) dans vec4.obj
+vec2.obj : error LNK2005: "public: struct sparky::maths::vec2 & __thiscall sparky::maths::vec2::divide(struct sparky::maths::vec2 const &)" (?divide@vec2@maths@sparky@@QAEAAU123@ABU123@@Z) déjà défini(e) dans vec4.obj
+vec2.obj : error LNK2005: "public: struct sparky::maths::vec2 & __thiscall sparky::maths::vec2::multiply(float const &,float const &)" (?multiply@vec2@maths@sparky@@QAEAAU123@ABM0@Z) déjà défini(e) dans vec4.obj
+vec2.obj : error LNK2005: "public: struct sparky::maths::vec2 & __thiscall sparky::maths::vec2::multiply(float const &)" (?multiply@vec2@maths@sparky@@QAEAAU123@ABM@Z) déjà défini(e) dans vec4.obj
+vec2.obj : error LNK2005: "public: struct sparky::maths::vec2 & __thiscall sparky::maths::vec2::multiply(struct sparky::maths::vec2 const &)" (?multiply@vec2@maths@sparky@@QAEAAU123@ABU123@@Z) déjà défini(e) dans vec4.obj
+vec2.obj : error LNK2005: "public: struct sparky::maths::vec2 & __thiscall sparky::maths::vec2::subtract(float const &,float const &)" (?subtract@vec2@maths@sparky@@QAEAAU123@ABM0@Z) déjà défini(e) dans vec4.obj
+vec2.obj : error LNK2005: "public: struct sparky::maths::vec2 & __thiscall sparky::maths::vec2::subtract(float const &)" (?subtract@vec2@maths@sparky@@QAEAAU123@ABM@Z) déjà défini(e) dans vec4.obj
+vec2.obj : error LNK2005: "public: struct sparky::maths::vec2 & __thiscall sparky::maths::vec2::subtract(struct sparky::maths::vec2 const &)" (?subtract@vec2@maths@sparky@@QAEAAU123@ABU123@@Z) déjà défini(e) dans vec4.obj
+LINK : warning LNK4098: conflit entre la bibliothèque par défaut 'MSVCRT' et les autres bibliothèques ; utilisez /NODEFAULTLIB:library
+LINK : warning LNK4098: conflit entre la bibliothèque par défaut 'LIBCMT' et les autres bibliothèques ; utilisez /NODEFAULTLIB:library
+C:\Users\marun\Documents\GitHub\Sparky\bin\Debug\SparkyCore.exe : fatal error LNK1169: un ou plusieurs symboles définis à différentes reprises ont été rencontrés
