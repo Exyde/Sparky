@@ -21,21 +21,16 @@ int main() {
 	vec2 c(2, 0);
 
 	a.Log();
-	b.Log();
-	c.Log();
+
+
+	a.add(1);
+	a.add(1.25, 3);
+
+	a.Log();
+
 	
 	LOG("------------");
 
-	a /= b;
-
-	a.Log();
-	b.Log();
-	c.Log();
-
-	if (a < b) LOG(" a < b");
-	if (a > b) LOG(" a > b");
-	if (a == b) LOG(" a == b");
-	if (a != b) LOG(" a != b");
 
 
 	while (!window.Closed()) {
