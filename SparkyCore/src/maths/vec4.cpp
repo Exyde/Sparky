@@ -2,8 +2,6 @@
 
 namespace sparky::maths {
 
-	//TODO : Recheck this class
-
 	vec4::vec4() { x = 0.0f; y = 0.0f; z = 0.0f; w = 0.0f; }
 
 	vec4::vec4(const float& x, const float& y, const float& z, const float& w) {
@@ -33,6 +31,8 @@ namespace sparky::maths {
 	vec4& vec4::subtract(const vec4& other) {
 		x -= other.x;
 		y -= other.y;
+		z -= other.z;
+		w -= other.w;
 		return *this;
 	}
 
@@ -41,8 +41,10 @@ namespace sparky::maths {
 
 	//vec4::Multiply
 	vec4& vec4::multiply(const vec4& other) {
-		x -= other.x;
-		y -= other.y;
+		x *= other.x;
+		y *= other.y;
+		z *= other.z;
+		w *= other.w;
 		return *this;
 	}
 
@@ -70,7 +72,7 @@ namespace sparky::maths {
 
 	//Operator Overloads
 	std::ostream& operator<<(std::ostream& stream, const vec4& vector) {
-		stream << "vec4 [" << vector.x << "," << vector.y << "]"; 
+		stream << "vec4 [" << vector.x << "," << vector.y << "," << vector.z << "," << vector.w << "]";
 		return stream; 
 	}
 
@@ -84,10 +86,6 @@ namespace sparky::maths {
 	vec4& vec4::operator*=(const vec4& b) { return this->multiply(b); }
 	vec4& vec4::operator/=(const vec4& b) { return this->divide(b); }
 
-	bool vec4::operator==(const vec4& b) { return this->x == b.x && this->y == b.y; }
+	bool vec4::operator==(const vec4& b) { return this->x == b.x && this->y == b.y && this->z == b.z && this->w == b.w; }
 	bool vec4::operator!=(const vec4& b) { return  !( *this == b ); }
-	bool vec4::operator<(const vec4& b)	 { return this->x < b.x && this->y < b.y; }
-	bool vec4::operator>(const vec4& b)  { return this->x > b.x&& this->y > b.y; }
-
-
 }

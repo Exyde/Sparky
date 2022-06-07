@@ -48,9 +48,5 @@ namespace sparky::maths {
 		//Comparaisons
 		bool operator==(const vec4& b);
 		bool operator!=(const vec4& b);
-
-		//Is this really usefull ?
-		bool operator<(const vec4& b);
-		bool operator>(const vec4& b);
 	};
 }
