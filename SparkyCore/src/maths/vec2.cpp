@@ -35,8 +35,8 @@ namespace sparky::maths {
 
 	//Vec2::Multiply
 	vec2& vec2::multiply(const vec2& other) {
-		x -= other.x;
-		y -= other.y;
+		x *= other.x;
+		y *= other.y;
 		return *this;
 	}
 
@@ -77,8 +77,4 @@ namespace sparky::maths {
 
 	bool vec2::operator==(const vec2& b) { return this->x == b.x && this->y == b.y; }
 	bool vec2::operator!=(const vec2& b) { return  !( *this == b ); }
-	bool vec2::operator<(const vec2& b)	 { return this->x < b.x && this->y < b.y; }
-	bool vec2::operator>(const vec2& b)  { return this->x > b.x&& this->y > b.y; }
-
-
 }

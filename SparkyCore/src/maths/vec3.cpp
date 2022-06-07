@@ -10,7 +10,6 @@ namespace sparky::maths {
 		this->x = x;
 		this->y= y;
 		this->z = z;
-
 	}
 
 	void vec3::Log() const {
@@ -32,6 +31,7 @@ namespace sparky::maths {
 	vec3& vec3::subtract(const vec3& other) {
 		x -= other.x;
 		y -= other.y;
+		z -= other.z;
 		return *this;
 	}
 
@@ -40,8 +40,9 @@ namespace sparky::maths {
 
 	//vec3::Multiply
 	vec3& vec3::multiply(const vec3& other) {
-		x -= other.x;
-		y -= other.y;
+		x *= other.x;
+		y *= other.y;
+		z *= other.z;
 		return *this;
 	}
 
@@ -51,13 +52,15 @@ namespace sparky::maths {
 	//vec3::Divide
 	vec3& vec3::divide(const vec3& other) {
 
-		if (other.x == 0 || other.y == 0) {
+		if (other.x == 0 || other.y == 0 || other.z == 0) {
 			//Todo : Log error 
 			return *this;
 		}
 
 		x /= other.x;
 		y /= other.y;
+		y /= other.z;
+
 		return *this;
 	}
 
@@ -80,10 +83,6 @@ namespace sparky::maths {
 	vec3& vec3::operator*=(const vec3& b) { return this->multiply(b); }
 	vec3& vec3::operator/=(const vec3& b) { return this->divide(b); }
 
-	bool vec3::operator==(const vec3& b) { return this->x == b.x && this->y == b.y; }
+	bool vec3::operator==(const vec3& b) { return this->x == b.x && this->y == b.y && this->z == b.z; }
 	bool vec3::operator!=(const vec3& b) { return  !( *this == b ); }
-	bool vec3::operator<(const vec3& b)	 { return this->x < b.x && this->y < b.y; }
-	bool vec3::operator>(const vec3& b)  { return this->x > b.x&& this->y > b.y; }
-
-
 }

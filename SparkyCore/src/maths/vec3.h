@@ -10,7 +10,7 @@ namespace sparky::maths {
 		float x, y, z;
 
 		vec3();
-		vec3(const  float& x, const float& y, const float& z);
+		vec3(const float& x, const float& y, const float& z);
 
 		void Log() const;
 
@@ -21,13 +21,13 @@ namespace sparky::maths {
 
 		//Overload
 		vec3& add(const float& other);
-		vec3& add(const float& a, const float& b, const float& c);
+		vec3& add(const float& x, const float& y, const float& z);
 		vec3& subtract(const float& other);
-		vec3& subtract(const float& a, const float& b, const float& c);
+		vec3& subtract(const float& x, const float& y, const float& z);
 		vec3& multiply(const float& other);
-		vec3& multiply(const float& a, const float& b, const float& c);
+		vec3& multiply(const float& x, const float& y, const float& z);
 		vec3& divide(const float& other);
-		vec3& divide(const float& a, const float& b, const float& c);
+		vec3& divide(const float& x, const float& y, const float& z);
 
 
 
@@ -47,9 +47,5 @@ namespace sparky::maths {
 		//Comparaisons
 		bool operator==(const vec3& b);
 		bool operator!=(const vec3& b);
-
-		//Is this really usefull ?
-		bool operator<(const vec3& b);
-		bool operator>(const vec3& b);
 	};
 }
