@@ -1,8 +1,5 @@
 #include "src/graphics/window.h"
-#include "src/maths/vec2.h"
-#include "src/maths/vec3.h"
-
-
+#include "src/maths/maths.h"
 #define LOG(x) std::cout << x << std::endl;
 
 int main() {
