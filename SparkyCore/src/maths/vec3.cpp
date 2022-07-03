@@ -71,10 +71,10 @@ namespace sparky::maths {
 		return stream; 
 	}
 
-	vec3& operator+(vec3& a, const vec3& b) { return a.add(b); } 
-	vec3& operator-(vec3& a, const vec3& b) { return a.subtract(b); }
-	vec3& operator*(vec3& a, const vec3& b) { return a.multiply(b); }
-	vec3& operator/(vec3& a, const vec3& b) { return a.divide(b); }
+	vec3 operator+(vec3 a, const vec3& b) { return a.add(b); } 
+	vec3 operator-(vec3 a, const vec3& b) { return a.subtract(b); }
+	vec3 operator*(vec3 a, const vec3& b) { return a.multiply(b); }
+	vec3 operator/(vec3 a, const vec3& b) { return a.divide(b); }
 
 	vec3& vec3::operator+=(const vec3& b) { return this->add(b); }
 	vec3& vec3::operator-=(const vec3& b) { return this->subtract(b); }

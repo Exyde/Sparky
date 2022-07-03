@@ -76,10 +76,10 @@ namespace sparky::maths {
 		return stream; 
 	}
 
-	vec4& operator+(vec4& a, const vec4& b) { return a.add(b); } 
-	vec4& operator-(vec4& a, const vec4& b) { return a.subtract(b); }
-	vec4& operator*(vec4& a, const vec4& b) { return a.multiply(b); }
-	vec4& operator/(vec4& a, const vec4& b) { return a.divide(b); }
+	vec4 operator+(vec4 a, const vec4& b) { return a.add(b); } 
+	vec4 operator-(vec4 a, const vec4& b) { return a.subtract(b); }
+	vec4 operator*(vec4 a, const vec4& b) { return a.multiply(b); }
+	vec4 operator/(vec4 a, const vec4& b) { return a.divide(b); }
 
 	vec4& vec4::operator+=(const vec4& b) { return this->add(b); }
 	vec4& vec4::operator-=(const vec4& b) { return this->subtract(b); }
