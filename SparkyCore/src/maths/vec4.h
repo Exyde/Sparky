@@ -34,10 +34,10 @@ namespace sparky::maths {
 
 		//Friend just for the sake of it, if it was a class we could handle private members.
 		friend std::ostream& operator<<(std::ostream& stream, const vec4& vector);
-		friend vec4& operator+(vec4& a, const vec4& b);
-		friend vec4& operator-(vec4& a, const vec4& b);
-		friend vec4& operator*(vec4& a, const vec4& b);
-		friend vec4& operator/(vec4& a, const vec4& b);
+		friend vec4& operator+(vec4 a, const vec4& b);
+		friend vec4& operator-(vec4 a, const vec4& b);
+		friend vec4& operator*(vec4 a, const vec4& b);
+		friend vec4& operator/(vec4 a, const vec4& b);
 
 		// +-*/ & = operator are not friend. 
 		vec4& operator+=(const vec4& b);

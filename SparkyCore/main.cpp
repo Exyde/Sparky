@@ -20,14 +20,8 @@ int main() {
 	vec2 c(2, 0);
 	vec3 vec(15, 23, 30);
 
-	vec.Log();
-
 	a.Log();
-
-
-	a.add(1);
-	a.add(1.25, 3);
-
+	vec2 d = a + c;
 	a.Log();
 
 	
